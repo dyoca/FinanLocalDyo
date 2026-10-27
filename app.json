@@ -1,17 +1,33 @@
 {
   "expo": {
     "name": "FinanLocal",
-    "slug": "FinanLocal",
+    "slug": "finanlocal",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "O FinanLocal usa a câmera para fotografar os comprovantes das despesas.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "O FinanLocal usa sua localização para registrar onde a despesa foi feita."
+        }
+      ]
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#EAF6EE",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
